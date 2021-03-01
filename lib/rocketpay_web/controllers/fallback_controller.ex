@@ -3,7 +3,6 @@ defmodule RocketpayWeb.FallbackController do
 
 
   def call(connection, {:error, result}) do
-    IO.puts("ENTROU AQUI")
     connection
     |> put_status(:bad_request)
     |> put_view(RocketpayWeb.ErrorView)
